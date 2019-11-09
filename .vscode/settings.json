@@ -73,5 +73,6 @@
         "xstring": "cpp",
         "xtr1common": "cpp",
         "xutility": "cpp"
-    }
+    },
+    "commentTranslate.targetLanguage": "es"
 }
