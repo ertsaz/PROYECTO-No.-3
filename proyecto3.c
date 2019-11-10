@@ -30,10 +30,9 @@ Prof. Crispina Ramos
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <string.h> // 
-#include "Funs_Ayudas.h" // funciones que son comunes entre archivos
+#include <string.h>                     //
+#include "Funs_Ayudas.h"                // funciones que son comunes entre archivos
 #include "Algoritmo_De_Ordenamientos.h" // Llaman a los dos algoritmos de ordenamiento
-
 
 // Funcion que crea y genera un archivo para registrar
 // las acciones del programa
@@ -44,7 +43,7 @@ void printLog(char text[300])
     escribirArchivo(filename, text);
 }
 
-// Funcion que 
+// Funcion que crea un archivo excel con los datos del algoritmo de turno
 void printResult(char *cNom_Algorit, int nTam, double tTiempoEjec)
 {
     char filename[300];
@@ -67,11 +66,9 @@ void CompaAlgorit(char *cNom_Algorit, int nTam, int *arrNumeros)
     sprintf(log, "nTam de Arreglo: %d", nTam);
     printLog(log);
 
-    // Get init time
     clock_t tIni_Tiemp, tFin_Tiemp;
     double tTiempoEjec = (double)(tFin_Tiemp - tIni_Tiemp) / CLOCKS_PER_SEC; // Tiempo de ejecucion
 
-    // Sort cNom_Algorit
     if (strcmp(cNom_Algorit, "heapSort") == 0)
     {
         tIni_Tiemp = clock();
@@ -84,7 +81,7 @@ void CompaAlgorit(char *cNom_Algorit, int nTam, int *arrNumeros)
     }
 
     tFin_Tiemp = clock();
-    tTiempoEjec = (double)(tFin_Tiemp - tIni_Tiemp) / CLOCKS_PER_SEC;  
+    tTiempoEjec = (double)(tFin_Tiemp - tIni_Tiemp) / CLOCKS_PER_SEC;
 
     sprintf(log, "La tarea del algoritmo ha tomado% f segundos", tTiempoEjec);
     printLog(log);
@@ -115,29 +112,38 @@ int main(int argc, char const *argv[])
 {
     int nAlgoritmo = 0, nTam = 0, nIncreTam = 10, nIncreTamAux = 1;
 
+    // genera numeros al azar
     GeneradorDeNumeros();
 
-    char cNom_Algorit[50];
-    int *arrNumeros;
-
+    char cNom_Algorit[50]; // almacena los nombres de los algoritmos
+    int *arrNumeros; // arreglo dinamico
+    // Ciclo que aumenta el tamaño del areglo de 10 en 10
     for (nIncreTam = 10, nIncreTamAux = 1, nTam = 10; nTam <= 1000000; nTam += nIncreTam)
     {
+
+        // condicion para incrementar el tamaño 
+        // del arreglo de 10 en 10 modificando nIncreTam 
         if (nIncreTamAux % 10 == 0)
         {
             nIncreTamAux = 1;
             nIncreTam = nIncreTam * 10;
         }
 
+        // Ciclo for{} realiza los dos algoritmos  con el mismo tamaño de arreglo
+        // automaticamente uno seguido de otro con 
         for (nAlgoritmo = 0; nAlgoritmo < 2; nAlgoritmo++)
         {
             strcpy(cNom_Algorit, (nAlgoritmo == 0) ? "heapSort" : "quickSort");
 
+            // Se crea un arreglo de tamaño dinamico para los
+            // diferentes casos
             arrNumeros = (int *)malloc(sizeof(int) * nTam);
 
-            //Leer números del archivo
+            // Leer números del archivo
             LeerNumeroArchivo(nTam, arrNumeros);
 
-            //Ejecutar algoritmo de ordenación
+            // Ejecutar algoritmo de ordenación
+            // dependiendo de el algoritmo
             CompaAlgorit(cNom_Algorit, nTam, arrNumeros);
         }
 
