@@ -1,44 +1,44 @@
-// To heapify a subtree rooted with node i which is
-// an index in arr[]. n is size of heap
+//Para heapificar un subárbol enraizado con el nodo i que es
+//un índice en arr []. n es el tamaño del montón
 void heapify (int *numbers, int size, int i) {
-    int largest = i;  // Initialize largest as root
-    int l = 2*i + 1;  // left = 2*i + 1
-    int r = 2*i + 2;  // right = 2*i + 2
+    int largest = i;  //Inicializar más grande como root
+    int l = 2*i + 1;  //izquierda = 2 *i + 1
+    int r = 2*i + 2;  //right = 2 *i + 2
     int tmp;
 
-    // If left child is larger than root
+    //Si el hijo izquierdo es más grande que la raíz
     if (l < size && numbers[l] > numbers[largest]) {
         largest = l;
     }
 
-    // If right child is larger than largest so far
+    //Si el hijo derecho es más grande que el mayor hasta ahora
     if (r < size && numbers[r] > numbers[largest]) {
         largest = r;
     }
 
-    // If largest is not root
+    //Si el más grande no es root
     if (largest != i) {
         swap(i, largest, numbers);
 
-        // Recursively heapify the affected sub-tree
+        //Heapify recursivamente el subárbol afectado
         heapify(numbers, size, largest);
     }
 }
 
-// main function to do heap sort
+//función principal para hacer la ordenación del montón
 void heapSort (int *numbers, int size) {
     int i, tmp;
-    // Build heap (rearrange array)
+    //Build heap (reorganizar matriz)
     for (i = size / 2 - 1; i >= 0; i--) {
         heapify(numbers, size, i);
     }
 
-    // One by one extract an element from heap
+    //Uno por uno extrae un elemento del montón
     for (i = size-1; i >= 0; i--) {
-        // Move current root to end
+        //Mover la raíz actual al final
         swap(0, i, numbers);
 
-        // call max heapify on the reduced heap
+        //call max heapify en el montón reducido
         heapify(numbers, i, 0);
     }
 }

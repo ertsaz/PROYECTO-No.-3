@@ -1,42 +1,42 @@
-int partition(int left, int right, int pivot, int *numbers) {
-   int leftPointer = left -1;
-   int rightPointer = right;
+int dividir(int nIni, int nFin, int nPivote, int *arrNumeros)
+{
+   int nPunto_Ini = nIni - 1;
+   int nPunto_Final = nFin;
 
-   while (1) {
-      while (numbers[++leftPointer] < pivot) 
+   while (1)
+   {
+      while (arrNumeros[++nPunto_Ini] < nPivote)
       {
-         //do nothing
       }
 
-      while (rightPointer > 0 && numbers[--rightPointer] > pivot) 
+      while (nPunto_Final > 0 && arrNumeros[--nPunto_Final] > nPivote)
       {
-         //do nothing
       }
 
-      if (leftPointer >= rightPointer) 
+      if (nPunto_Ini >= nPunto_Final)
       {
          break;
-      } else 
+      }
+      else
       {
-         // printf(" item swapped :%d,%d\n", numbers[leftPointer],numbers[rightPointer]);
-         swap(leftPointer,rightPointer, numbers);
+         swap(nPunto_Ini, nPunto_Final, arrNumeros);
       }
    }
-
-   // printf(" pivot swapped :%d,%d\n", numbers[leftPointer],numbers[right]);
-   swap(leftPointer, right, numbers);
-   // printf("Updated Array: ");
-   // display();
-   return leftPointer;
+   swap(nPunto_Ini, nFin, arrNumeros);
+   return nPunto_Ini;
 }
 
-void quickSort(int left, int right, int *numbers) {
-   if(right - left <= 0) {
+void quickSort(int nIni, int nFin, int *arrNumeros)
+{
+   if (nFin - nIni <= 0)
+   {
       return;
-   } else {
-      int pivot = numbers[right];
-      int partitionPoint = partition(left, right, pivot, numbers);
-      quickSort(left, partitionPoint-1, numbers);
-      quickSort(partitionPoint+1, right, numbers);
+   }
+   else
+   {
+      int nPivote = arrNumeros[nFin];
+      int nPunto_divicion = dividir(nIni, nFin, nPivote, arrNumeros);
+      quickSort(nIni, nPunto_divicion - 1, arrNumeros);
+      quickSort(nPunto_divicion + 1, nFin, arrNumeros);
    }
 }

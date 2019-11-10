@@ -35,23 +35,23 @@ void runSortAlgorithm(char *cNom_Algorit, int nTam, int *arrNumeros)
     printLog(log);
 
     // Get init time
-    clock_t timeStart, timeEnd;
-    double timeSpent = (double)(timeEnd - timeStart) / CLOCKS_PER_SEC;
+    clock_t tIni_Tiemp, tFin_Tiemp;
+    double timeSpent = (double)(tFin_Tiemp - tIni_Tiemp) / CLOCKS_PER_SEC;
 
     // Sort cNom_Algorit
     if (strcmp(cNom_Algorit, "heapSort") == 0)
     {
-        timeStart = clock();
+        tIni_Tiemp = clock();
         heapSort(arrNumeros, nTam);
     }
     else if (strcmp(cNom_Algorit, "quickSort") == 0)
     {
-        timeStart = clock();
+        tIni_Tiemp = clock();
         quickSort(0, nTam, arrNumeros);
     }
 
-    timeEnd = clock();
-    timeSpent = (double)(timeEnd - timeStart) / CLOCKS_PER_SEC;
+    tFin_Tiemp = clock();
+    timeSpent = (double)(tFin_Tiemp - tIni_Tiemp) / CLOCKS_PER_SEC;
 
     sprintf(log, "La tarea cNom_Algorit ha tomado% f segundos", timeSpent);
     printLog(log);
@@ -107,9 +107,9 @@ int main(int argc, char const *argv[])
             //Ejecutar algoritmo de ordenación
             runSortAlgorithm(cNom_Algorit, nTam, arrNumeros);
         }
-        free(arrNumeros);
 
         nIncreTamAux++;
     }
+    free(arrNumeros);
     return 0;
 }
