@@ -72,7 +72,8 @@
         "xstddef": "cpp",
         "xstring": "cpp",
         "xtr1common": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "funcion.h": "c"
     },
     "commentTranslate.targetLanguage": "es"
 }

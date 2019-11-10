@@ -1,6 +1,4 @@
-/*Esta función toma el último elemento como pivote, lugares
-el elemento pivote en su posición correcta en orden
-matriz y coloca todos los más pequeños (más pequeños que el pivote)
+/*coloca todos los más pequeños (más pequeños que el pivote)
 a la izquierda del pivote y todos los elementos mayores a la derecha
 de pivote */
 int Dividir (int arr[], int nInI, int nInF)  
