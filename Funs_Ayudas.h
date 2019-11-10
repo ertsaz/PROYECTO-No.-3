@@ -1,4 +1,4 @@
-static double tam = 100000; // Tamaño de la muesta
+static double tam = 10000000; // Tamaño de la muesta
 
 void escribirArchivo(char filename[140], char text[300])
 {
@@ -49,7 +49,7 @@ void GeneradorDeNumeros()
 						  // aleatorios con el reloj del sistema
 	for (int i = lg; i >= 0; i--)
 	{
-		sprintf(aux, "%i", randInt(0, 10000));
+		sprintf(aux, "%i", randInt(0, 1000000));
 		strcat(aux, " ");
 		if (i % 10 == 0)
 		{

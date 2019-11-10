@@ -39,7 +39,7 @@ Prof. Crispina Ramos
 void printLog(char text[300])
 {
     char filename[300];
-    sprintf(filename, "resultados/output.log"); // crea la carpeta y guarda la informacion
+    sprintf(filename, "resultados/output.log"); // crea la carpeta y guarda la informacion para ver despues
     escribirArchivo(filename, text);
 }
 
@@ -49,7 +49,12 @@ void printResult(char *cNom_Algorit, int nTam, double tTiempoEjec)
     char filename[300];
     sprintf(filename, "resultados/C_%s.csv", cNom_Algorit); // crea la carpeta y guarda la informacion
     char log[300];
+    char logt[300];
+    if (nTam == 0)
+        sprintf(logt, "%s, %s", "tam del arreglo", "tiempo");
     sprintf(log, "%d, %f", nTam, tTiempoEjec);
+    if (nTam == 0)
+        strcat(logt, log);
     escribirArchivo(filename, log);
 }
 
@@ -102,6 +107,7 @@ void LeerNumeroArchivo(int nTam, int *arrNumeros)
         while (i < nTam && fscanf(file, "%s", str) != EOF)
         {
             arrNumeros[i] = atoi(str);
+            ;
             i++;
         }
         fclose(file);
@@ -110,19 +116,19 @@ void LeerNumeroArchivo(int nTam, int *arrNumeros)
 
 int main(int argc, char const *argv[])
 {
-    int nAlgoritmo = 0, nTam = 0, nIncreTam = 10, nIncreTamAux = 1;
+    int nAlgoritmo = 0, nTam = 0, nIncreTam = 0, nIncreTamAux = 1;
 
     // genera numeros al azar
     GeneradorDeNumeros();
 
     char cNom_Algorit[50]; // almacena los nombres de los algoritmos
-    int *arrNumeros; // arreglo dinamico
+    int *arrNumeros;       // arreglo dinamico
     // Ciclo que aumenta el tamaño del areglo de 10 en 10
-    for (nIncreTam = 10, nIncreTamAux = 1, nTam = 10; nTam <= 1000000; nTam += nIncreTam)
+    for (nIncreTam = 10, nIncreTamAux = 1, nTam = 0; nTam <= 1000000; nTam += nIncreTam)
     {
 
-        // condicion para incrementar el tamaño 
-        // del arreglo de 10 en 10 modificando nIncreTam 
+        // condicion para incrementar el tamaño
+        // del arreglo de 10 en 10 modificando nIncreTam
         if (nIncreTamAux % 10 == 0)
         {
             nIncreTamAux = 1;
@@ -130,7 +136,7 @@ int main(int argc, char const *argv[])
         }
 
         // Ciclo for{} realiza los dos algoritmos  con el mismo tamaño de arreglo
-        // automaticamente uno seguido de otro con 
+        // automaticamente uno seguido de otro con
         for (nAlgoritmo = 0; nAlgoritmo < 2; nAlgoritmo++)
         {
             strcpy(cNom_Algorit, (nAlgoritmo == 0) ? "heapSort" : "quickSort");
@@ -151,4 +157,5 @@ int main(int argc, char const *argv[])
     }
     free(arrNumeros);
     return 0;
+    exit(1); //cerrado automatico
 }
