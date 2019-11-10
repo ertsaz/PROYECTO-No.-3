@@ -18,6 +18,7 @@ void swap(int i, int j, int *arr)
 	arr[j] = tmp;
 }
 
+// generacion de un numero aleatorio 
 int randInt(int min, int max)
 {
 	int randomNum = (int)(rand() % (max - min + 1) + min);

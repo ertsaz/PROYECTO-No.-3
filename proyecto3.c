@@ -5,19 +5,23 @@
 #include "Funs_Ayudas.h" // funciones que son comunes entre archivos
 #include "Algoritmo_De_Ordenamientos.h" // Llaman a los dos algoritmos de ordenamiento
 
+
+// Funcion que crea y genera un archivo para registrar
+// las acciones del programa
 void printLog(char text[300])
 {
     char filename[300];
-    sprintf(filename, "output.log");
+    sprintf(filename, "resultados/output.log");
     escribirArchivo(filename, text);
 }
 
-void printResult(char *algorithm, int size, double timeSpent)
+// Funcion que 
+void printResult(char *cNom_Algorit, int nTam, double tTiempoEjec)
 {
     char filename[300];
-    sprintf(filename, "CPP_%s.csv", algorithm);
+    sprintf(filename, "resultados/CPP_%s.csv", cNom_Algorit);
     char log[300];
-    sprintf(log, "%d, %f", size, timeSpent);
+    sprintf(log, "%d, %f", nTam, tTiempoEjec);
     escribirArchivo(filename, log);
 }
 
@@ -36,7 +40,7 @@ void CompaAlgorit(char *cNom_Algorit, int nTam, int *arrNumeros)
 
     // Get init time
     clock_t tIni_Tiemp, tFin_Tiemp;
-    double timeSpent = (double)(tFin_Tiemp - tIni_Tiemp) / CLOCKS_PER_SEC;
+    double tTiempoEjec = (double)(tFin_Tiemp - tIni_Tiemp) / CLOCKS_PER_SEC; // Tiempo de ejecucion
 
     // Sort cNom_Algorit
     if (strcmp(cNom_Algorit, "heapSort") == 0)
@@ -51,11 +55,11 @@ void CompaAlgorit(char *cNom_Algorit, int nTam, int *arrNumeros)
     }
 
     tFin_Tiemp = clock();
-    timeSpent = (double)(tFin_Tiemp - tIni_Tiemp) / CLOCKS_PER_SEC;
+    tTiempoEjec = (double)(tFin_Tiemp - tIni_Tiemp) / CLOCKS_PER_SEC;  
 
-    sprintf(log, "La tarea del algoritmo ha tomado% f segundos", timeSpent);
+    sprintf(log, "La tarea del algoritmo ha tomado% f segundos", tTiempoEjec);
     printLog(log);
-    printResult(cNom_Algorit, nTam, timeSpent);
+    printResult(cNom_Algorit, nTam, tTiempoEjec);
 }
 
 //Leer números del archivo y almacenarlo en una matriz en la memoria
