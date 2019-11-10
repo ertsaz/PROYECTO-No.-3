@@ -3,7 +3,7 @@
 void heapify (int *arrNumeros, int nTam, int i) {
     int nMayor = i;  //Inicializar más grande como root
     int nIzq = 2*i + 1;  //izquierda = 2 *i + 1
-    int nDer = 2*i + 2;  //right = 2 *i + 2
+    int nDer = 2*i + 2;  //derecha = 2 *i + 2
     int tmp;
 
     //Si el hijo izquierdo es más grande que la raíz
@@ -28,7 +28,7 @@ void heapify (int *arrNumeros, int nTam, int i) {
 //función principal para hacer la ordenación del montón
 void heapSort (int *arrNumeros, int nTam) {
     int i, tmp;
-    //Build heap (reorganizar matriz)
+    // (reorganizar el arreglo)
     for (i = nTam / 2 - 1; i >= 0; i--) {
         heapify(arrNumeros, nTam, i);
     }
@@ -38,7 +38,7 @@ void heapSort (int *arrNumeros, int nTam) {
         //Mover la raíz actual al final
         swap(0, i, arrNumeros);
 
-        //call max heapify en el montón reducido
+        //llama maximo heapify en el montón reducido
         heapify(arrNumeros, i, 0);
     }
 }

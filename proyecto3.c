@@ -47,7 +47,7 @@ void printLog(char text[300])
 void printResult(char *cNom_Algorit, int nTam, double tTiempoEjec)
 {
     char filename[300];
-    sprintf(filename, "resultados/CPP_%s.csv", cNom_Algorit); // crea la carpeta y guarda la informacion
+    sprintf(filename, "resultados/C_%s.csv", cNom_Algorit); // crea la carpeta y guarda la informacion
     char log[300];
     sprintf(log, "%d, %f", nTam, tTiempoEjec);
     escribirArchivo(filename, log);
