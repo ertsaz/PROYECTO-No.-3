@@ -1,17 +1,14 @@
 static double tam = 100000; // Tamaño de la muesta
 
-void printArray(int size, int *arr)
+void escribirArchivo(char filename[140], char text[300])
 {
-	int i;
-	for (i = 0; i < size; i++)
+	FILE *file;
+	file = fopen(filename, "a");
+	if (file)
 	{
-		printf("%d ", arr[i]);
-		if (i < size - 1)
-		{
-			printf(" ");
-		}
+		fprintf(file, "%s\n", text);
+		fclose(file);
 	}
-	printf("\n");
 }
 
 void swap(int i, int j, int *arr)
@@ -30,6 +27,7 @@ int randInt(int min, int max)
 void GeneradorDeNumeros()
 {
 	FILE *fp;
+	char aux[80];
 
 	fp = fopen("numeros.txt", "wt");
 
@@ -41,17 +39,22 @@ void GeneradorDeNumeros()
 
 	char numero[] = "/0";
 
-	double lg = tam;
+	int lg = tam;
 	time_t t; // tipo definido en time.h
 	register int i;
 
 	srand((int)time(&t)); // Fija la semilla del generador:
 						  // Inicializa el generador de numeros
 						  // aleatorios con el reloj del sistema
-	for (double i = lg; i >= 0; i--)
+	for (int i = lg; i >= 0; i--)
 	{
-		fprintf(fp, "%i", randInt(0,10000));
-		fprintf(fp, " ");
+		sprintf(aux, "%i", randInt(0, 10000));
+		strcat(aux, " ");
+		if (i % 10 == 0)
+		{
+			fprintf(fp, "%s", aux);
+			strcpy(aux, "");
+		}
 	}
 	fclose(fp);
 }

@@ -1,39 +1,42 @@
-/*coloca todos los más pequeños (más pequeños que el pivote)
-a la izquierda del pivote y todos los elementos mayores a la derecha
-de pivote */
-int Dividir (int arr[], int nInI, int nInF)  
-{  
-    int nPivote = arr[nInF]; // pivote
-    int i = (nInI - 1); // Índice de elemento más pequeño
-  
-    for (int j = nInI; j <= nInF - 1; j++)  
-    {  
-        // Si el elemento actual es más pequeño que el pivote
-        if (arr[j] < nPivote)  
-        {  
-            i++; // índice de incremento del elemento más pequeño
-            swap(&arr[i], &arr[j]);  
-        }  
-    }  
-    swap(&arr[i + 1], &arr[nInF]);  
-    return (i + 1);  
-}  
-  
-/*La función principal que implementa QuickSort
-arr [] -> Matriz para ordenar,
-nInI -> Índice inicial,
-nInF -> índice final */
-void quickSort(int arr[], int nInI, int nInF)  
-{  
-    if (nInI < nInF)  
-    {  
-        /* pi es el índice de partición, arr [p] es ahora
-        en el lugar correcto */
-        int pi = Dividir(arr, nInI, nInF);  
-  
-        // Separar elementos por separado antes
-        //partición y después de la partición
-        quickSort(arr, nInI, pi - 1);  
-        quickSort(arr, pi + 1, nInF);  
-    }  
-}  
+int partition(int left, int right, int pivot, int *numbers) {
+   int leftPointer = left -1;
+   int rightPointer = right;
+
+   while (1) {
+      while (numbers[++leftPointer] < pivot) 
+      {
+         //do nothing
+      }
+
+      while (rightPointer > 0 && numbers[--rightPointer] > pivot) 
+      {
+         //do nothing
+      }
+
+      if (leftPointer >= rightPointer) 
+      {
+         break;
+      } else 
+      {
+         // printf(" item swapped :%d,%d\n", numbers[leftPointer],numbers[rightPointer]);
+         swap(leftPointer,rightPointer, numbers);
+      }
+   }
+
+   // printf(" pivot swapped :%d,%d\n", numbers[leftPointer],numbers[right]);
+   swap(leftPointer, right, numbers);
+   // printf("Updated Array: ");
+   // display();
+   return leftPointer;
+}
+
+void quickSort(int left, int right, int *numbers) {
+   if(right - left <= 0) {
+      return;
+   } else {
+      int pivot = numbers[right];
+      int partitionPoint = partition(left, right, pivot, numbers);
+      quickSort(left, partitionPoint-1, numbers);
+      quickSort(partitionPoint+1, right, numbers);
+   }
+}

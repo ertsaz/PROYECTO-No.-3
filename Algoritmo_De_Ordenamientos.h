@@ -1,2 +1,2 @@
-#include <heapSort.h>
-#include <quickSort.h>
+#include "heapSort.h"
+#include "quickSort.h"
