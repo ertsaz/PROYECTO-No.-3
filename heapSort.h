@@ -2,18 +2,18 @@
 //un índice en arr []. n es el tamaño del montón
 void heapify (int *arrNumeros, int nTam, int i) {
     int nMayor = i;  //Inicializar más grande como root
-    int l = 2*i + 1;  //izquierda = 2 *i + 1
-    int r = 2*i + 2;  //right = 2 *i + 2
+    int nIzq = 2*i + 1;  //izquierda = 2 *i + 1
+    int nDer = 2*i + 2;  //right = 2 *i + 2
     int tmp;
 
     //Si el hijo izquierdo es más grande que la raíz
-    if (l < nTam && arrNumeros[l] > arrNumeros[nMayor]) {
-        nMayor = l;
+    if (nIzq < nTam && arrNumeros[nIzq] > arrNumeros[nMayor]) {
+        nMayor = nIzq;
     }
 
     //Si el hijo derecho es más grande que el mayor hasta ahora
-    if (r < nTam && arrNumeros[r] > arrNumeros[nMayor]) {
-        nMayor = r;
+    if (nDer < nTam && arrNumeros[nDer] > arrNumeros[nMayor]) {
+        nMayor = nDer;
     }
 
     //Si el más grande no es root

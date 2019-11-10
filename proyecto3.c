@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <string.h>
-#include "funcion.h"
-#include "Algoritmo_De_Ordenamientos.h"
+#include <string.h> // 
+#include "Funs_Ayudas.h" // funciones que son comunes entre archivos
+#include "Algoritmo_De_Ordenamientos.h" // Llaman a los dos algoritmos de ordenamiento
 
 void printLog(char text[300])
 {
@@ -21,7 +21,7 @@ void printResult(char *algorithm, int size, double timeSpent)
     escribirArchivo(filename, log);
 }
 
-void runSortAlgorithm(char *cNom_Algorit, int nTam, int *arrNumeros)
+void CompaAlgorit(char *cNom_Algorit, int nTam, int *arrNumeros)
 {
     char log[300];
 
@@ -53,7 +53,7 @@ void runSortAlgorithm(char *cNom_Algorit, int nTam, int *arrNumeros)
     tFin_Tiemp = clock();
     timeSpent = (double)(tFin_Tiemp - tIni_Tiemp) / CLOCKS_PER_SEC;
 
-    sprintf(log, "La tarea cNom_Algorit ha tomado% f segundos", timeSpent);
+    sprintf(log, "La tarea del algoritmo ha tomado% f segundos", timeSpent);
     printLog(log);
     printResult(cNom_Algorit, nTam, timeSpent);
 }
@@ -105,7 +105,7 @@ int main(int argc, char const *argv[])
             LeerNumeroArchivo(nTam, arrNumeros);
 
             //Ejecutar algoritmo de ordenación
-            runSortAlgorithm(cNom_Algorit, nTam, arrNumeros);
+            CompaAlgorit(cNom_Algorit, nTam, arrNumeros);
         }
 
         nIncreTamAux++;
