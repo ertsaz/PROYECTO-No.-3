@@ -49,8 +49,19 @@ void printResult(char *cNom_Algorit, int nTam, double tTiempoEjec)
     char filename[300];
     sprintf(filename, "resultados/C_%s.csv", cNom_Algorit); // crea la carpeta y guarda la informacion
     char log[300];
-    sprintf(log, "%d, %f", nTam, tTiempoEjec);
-    escribirArchivo(filename, log);
+    char logt[300];
+    if (nTam > 10)
+    {
+        sprintf(log, "%d, %f", nTam, tTiempoEjec);
+        escribirArchivo(filename, log);
+    }
+    else
+    {
+        sprintf(logt, "%s, %s \n", "tam del arreglo", "tiempo");
+        sprintf(log, "%d, %f", nTam, tTiempoEjec);
+        strcat(logt, log);
+        escribirArchivo(filename, logt);
+    }
 }
 
 void CompaAlgorit(char *cNom_Algorit, int nTam, int *arrNumeros)
@@ -83,7 +94,7 @@ void CompaAlgorit(char *cNom_Algorit, int nTam, int *arrNumeros)
     tFin_Tiemp = clock();
     tTiempoEjec = (double)(tFin_Tiemp - tIni_Tiemp) / CLOCKS_PER_SEC;
 
-    sprintf(log, "La tarea del algoritmo ha tomado% f segundos", tTiempoEjec);
+    sprintf(log, "La tarea del algoritmo ha tomado %f segundos", tTiempoEjec);
     printLog(log);
     printResult(cNom_Algorit, nTam, tTiempoEjec);
 }
@@ -122,7 +133,7 @@ int main(int argc, char const *argv[])
     {
 
         // condicion para incrementar el tamaño
-        // del arreglo de 10 en 10 modificando nIncreTam
+        // del arreglo de 10 en 10 modificando nIncreTam 
         if (nIncreTamAux % 10 == 0)
         {
             nIncreTamAux = 1;
@@ -133,19 +144,20 @@ int main(int argc, char const *argv[])
         // automaticamente uno seguido de otro con
         for (nAlgoritmo = 0; nAlgoritmo < 2; nAlgoritmo++)
         {
-            strcpy(cNom_Algorit, (nAlgoritmo == 0) ? "heapSort " : "quickSort");
+            strcpy(cNom_Algorit, (nAlgoritmo == 0) ? "heapSort" : "quickSort");
 
             // Se crea un arreglo de tamaño dinamico para los
             // diferentes casos
             arrNumeros = (int *)malloc(sizeof(int) * nTam);
 
-            printf("Algoritmo %s Porcesos completos [%i / %i]\n", cNom_Algorit, nTam, 1000000); // muestra progreso
             // Leer números del archivo
             LeerNumeroArchivo(nTam, arrNumeros);
 
             // Ejecutar algoritmo de ordenación
             // dependiendo de el algoritmo
             CompaAlgorit(cNom_Algorit, nTam, arrNumeros);
+
+            printf("Algoritmo %s Porcesos completos [%i / %i]\n", cNom_Algorit, nTam, 1000000); // muestra progreso
         }
 
         nIncreTamAux++;
