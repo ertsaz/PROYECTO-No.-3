@@ -1,4 +1,4 @@
-static double tam = 10000000; // Tamaño de la muesta
+static double tam = 1000000; // Tamaño de la muesta
 
 void escribirArchivo(char filename[140], char text[300])
 {

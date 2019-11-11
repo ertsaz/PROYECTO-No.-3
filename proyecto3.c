@@ -49,14 +49,7 @@ void printResult(char *cNom_Algorit, int nTam, double tTiempoEjec)
     char filename[300];
     sprintf(filename, "resultados/C_%s.csv", cNom_Algorit); // crea la carpeta y guarda la informacion
     char log[300];
-    char logt[300];
-    if (nTam == 0)
-        sprintf(logt, "%s, %s \n", "tam del arreglo", "tiempo");
     sprintf(log, "%d, %f", nTam, tTiempoEjec);
-    if (nTam == 0)
-        strcat(logt, log);
-    if (nTam == 0)
-        escribirArchivo(filename, logt);
     escribirArchivo(filename, log);
 }
 
@@ -109,7 +102,6 @@ void LeerNumeroArchivo(int nTam, int *arrNumeros)
         while (i < nTam && fscanf(file, "%s", str) != EOF)
         {
             arrNumeros[i] = atoi(str);
-            ;
             i++;
         }
         fclose(file);
@@ -126,7 +118,7 @@ int main(int argc, char const *argv[])
     char cNom_Algorit[50]; // almacena los nombres de los algoritmos
     int *arrNumeros;       // arreglo dinamico
     // Ciclo que aumenta el tamaño del areglo de 10 en 10
-    for (nIncreTam = 10, nIncreTamAux = 1, nTam = 0; nTam <= 1000000; nTam += nIncreTam)
+    for (nIncreTam = 10, nIncreTamAux = 1, nTam = 10; nTam <= 1000000; nTam += nIncreTam)
     {
 
         // condicion para incrementar el tamaño
