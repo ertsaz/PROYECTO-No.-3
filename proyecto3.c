@@ -38,30 +38,53 @@ Prof. Crispina Ramos
 // las acciones del programa
 void printLog(char text[300])
 {
-    char filename[300];
-    sprintf(filename, "resultados/output.log"); // crea la carpeta y guarda la informacion para ver despues
-    escribirArchivo(filename, text);
+    char NombreArch[300];
+    sprintf(NombreArch, "resultados/output.log"); // crea la carpeta y guarda la informacion para ver despues
+    escribirArchivo(NombreArch, text);
 }
 
 // Funcion que crea un archivo excel con los datos del algoritmo de turno
 void printResult(char *cNom_Algorit, int nTam, double tTiempoEjec)
 {
-    char filename[300];
-    sprintf(filename, "resultados/C_%s.csv", cNom_Algorit); // crea la carpeta y guarda la informacion
+    char NombreArch[300];
+    sprintf(NombreArch, "resultados/C_%s.csv", cNom_Algorit); // crea la carpeta y guarda la informacion
     char log[300];
     char logt[300];
     if (nTam > 10)
     {
         sprintf(log, "%d, %f", nTam, tTiempoEjec);
-        escribirArchivo(filename, log);
+        escribirArchivo(NombreArch, log);
     }
     else
     {
         sprintf(logt, "%s, %s \n", "tam del arreglo", "tiempo");
         sprintf(log, "%d, %f", nTam, tTiempoEjec);
         strcat(logt, log);
-        escribirArchivo(filename, logt);
+        escribirArchivo(NombreArch, logt);
     }
+}
+
+// Funcion que crea un archivo excel con los datos del algoritmo de turno
+void printMuestra(char *cNom_Algorit, int nTam, int *arrNumeros)
+{
+    char NombreArch[300];
+    sprintf(NombreArch, "resultados/C_muestra_%s.csv", cNom_Algorit); // crea la carpeta y guarda la informacion
+    char log[300] = "/0";
+    char logtemp[300] = "/0";
+    char logtempt[300] = "/0";
+    for (int i = 0; i < nTam; i++)
+    {
+        if (i < nTam - 1)
+        {
+            sprintf(logtemp, "%d, ", arrNumeros[i]);
+        }
+        else if (i == nTam - 1)
+        {
+            sprintf(logtemp, "%d \n", arrNumeros[i]);
+        }
+        strcat(log, logtemp);
+    }
+    escribirArchivo(NombreArch, log);
 }
 
 void CompaAlgorit(char *cNom_Algorit, int nTam, int *arrNumeros)
@@ -79,6 +102,10 @@ void CompaAlgorit(char *cNom_Algorit, int nTam, int *arrNumeros)
 
     clock_t tIni_Tiemp, tFin_Tiemp;
     double tTiempoEjec = (double)(tFin_Tiemp - tIni_Tiemp) / CLOCKS_PER_SEC; // Tiempo de ejecucion
+    if (nTam == 10 || nTam == 100 || nTam == 1000)
+    {
+        printMuestra(cNom_Algorit, nTam, arrNumeros);
+    }
 
     if (strcmp(cNom_Algorit, "heapSort") == 0)
     {
@@ -97,6 +124,10 @@ void CompaAlgorit(char *cNom_Algorit, int nTam, int *arrNumeros)
     sprintf(log, "La tarea del algoritmo ha tomado %f segundos", tTiempoEjec);
     printLog(log);
     printResult(cNom_Algorit, nTam, tTiempoEjec);
+    if (nTam == 10 || nTam == 100 || nTam == 1000)
+    {
+        printMuestra(cNom_Algorit, nTam, arrNumeros);
+    }
 }
 
 //Leer números del archivo y almacenarlo en una matriz en la memoria
@@ -133,7 +164,7 @@ int main(int argc, char const *argv[])
     {
 
         // condicion para incrementar el tamaño
-        // del arreglo de 10 en 10 modificando nIncreTam 
+        // del arreglo de 10 en 10 modificando nIncreTam
         if (nIncreTamAux % 10 == 0)
         {
             nIncreTamAux = 1;
