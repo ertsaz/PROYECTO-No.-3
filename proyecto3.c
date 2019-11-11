@@ -51,10 +51,12 @@ void printResult(char *cNom_Algorit, int nTam, double tTiempoEjec)
     char log[300];
     char logt[300];
     if (nTam == 0)
-        sprintf(logt, "%s, %s", "tam del arreglo", "tiempo");
+        sprintf(logt, "%s, %s \n", "tam del arreglo", "tiempo");
     sprintf(log, "%d, %f", nTam, tTiempoEjec);
     if (nTam == 0)
         strcat(logt, log);
+    if (nTam == 0)
+        escribirArchivo(filename, logt);
     escribirArchivo(filename, log);
 }
 
@@ -139,12 +141,13 @@ int main(int argc, char const *argv[])
         // automaticamente uno seguido de otro con
         for (nAlgoritmo = 0; nAlgoritmo < 2; nAlgoritmo++)
         {
-            strcpy(cNom_Algorit, (nAlgoritmo == 0) ? "heapSort" : "quickSort");
+            strcpy(cNom_Algorit, (nAlgoritmo == 0) ? "heapSort " : "quickSort");
 
             // Se crea un arreglo de tamaño dinamico para los
             // diferentes casos
             arrNumeros = (int *)malloc(sizeof(int) * nTam);
 
+            printf("Algoritmo %s Porcesos completos [%i / %i]\n", cNom_Algorit, nTam, 1000000); // muestra progreso
             // Leer números del archivo
             LeerNumeroArchivo(nTam, arrNumeros);
 
