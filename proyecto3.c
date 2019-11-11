@@ -65,13 +65,14 @@ void printResult(char *cNom_Algorit, int nTam, double tTiempoEjec)
 }
 
 // Funcion que crea un archivo excel con los datos del algoritmo de turno
-void printMuestra(char *cNom_Algorit, int nTam, int *arrNumeros)
+void printMuestra(char *cNom_Algorit, int nTam, int *arrNumeros, const char *modo)
 {
     char NombreArch[300];
     sprintf(NombreArch, "resultados/C_muestra_%s.csv", cNom_Algorit); // crea la carpeta y guarda la informacion
-    char log[300] = "/0";
-    char logtemp[300] = "/0";
-    char logtempt[300] = "/0";
+    char log[3000] = " ";
+    char logtemp[300] = " ";
+    strcpy(log, modo);
+    strcat(log, "\n");
     for (int i = 0; i < nTam; i++)
     {
         if (i < nTam - 1)
@@ -80,11 +81,12 @@ void printMuestra(char *cNom_Algorit, int nTam, int *arrNumeros)
         }
         else if (i == nTam - 1)
         {
-            sprintf(logtemp, "%d \n", arrNumeros[i]);
+            sprintf(logtemp, "%d\n", arrNumeros[i]);
         }
         strcat(log, logtemp);
     }
     escribirArchivo(NombreArch, log);
+    strcpy(log, "");
 }
 
 void CompaAlgorit(char *cNom_Algorit, int nTam, int *arrNumeros)
@@ -102,9 +104,9 @@ void CompaAlgorit(char *cNom_Algorit, int nTam, int *arrNumeros)
 
     clock_t tIni_Tiemp, tFin_Tiemp;
     double tTiempoEjec = (double)(tFin_Tiemp - tIni_Tiemp) / CLOCKS_PER_SEC; // Tiempo de ejecucion
-    if (nTam == 10 || nTam == 100 || nTam == 1000)
+    if (nTam == 10 || nTam == 100 )
     {
-        printMuestra(cNom_Algorit, nTam, arrNumeros);
+        printMuestra(cNom_Algorit, nTam, arrNumeros, "original");
     }
 
     if (strcmp(cNom_Algorit, "heapSort") == 0)
@@ -124,9 +126,9 @@ void CompaAlgorit(char *cNom_Algorit, int nTam, int *arrNumeros)
     sprintf(log, "La tarea del algoritmo ha tomado %f segundos", tTiempoEjec);
     printLog(log);
     printResult(cNom_Algorit, nTam, tTiempoEjec);
-    if (nTam == 10 || nTam == 100 || nTam == 1000)
+    if (nTam == 10 || nTam == 100)
     {
-        printMuestra(cNom_Algorit, nTam, arrNumeros);
+        printMuestra(cNom_Algorit, nTam, arrNumeros, "ordenado");
     }
 }
 
