@@ -104,7 +104,7 @@ void CompaAlgorit(char *cNom_Algorit, int nTam, int *arrNumeros)
 
     clock_t tIni_Tiemp, tFin_Tiemp;
     double tTiempoEjec = (double)(tFin_Tiemp - tIni_Tiemp) / CLOCKS_PER_SEC; // Tiempo de ejecucion
-    if (nTam == 10 || nTam == 100 )
+    if (nTam == 10 || nTam == 100)
     {
         printMuestra(cNom_Algorit, nTam, arrNumeros, "original");
     }
@@ -117,7 +117,7 @@ void CompaAlgorit(char *cNom_Algorit, int nTam, int *arrNumeros)
     else if (strcmp(cNom_Algorit, "quickSort") == 0)
     {
         tIni_Tiemp = clock();
-        quickSort(0, nTam, arrNumeros);
+        quickSort(0, nTam - 1, arrNumeros);
     }
 
     tFin_Tiemp = clock();
@@ -137,7 +137,7 @@ void LeerNumeroArchivo(int nTam, int *arrNumeros)
 {
     int i = 0;
     char fileArchivo[] = "numeros.txt";
-    char str[1000];
+    char str[10000];
 
     FILE *file;
     file = fopen(fileArchivo, "r");
@@ -162,7 +162,7 @@ int main(int argc, char const *argv[])
     char cNom_Algorit[50]; // almacena los nombres de los algoritmos
     int *arrNumeros;       // arreglo dinamico
     // Ciclo que aumenta el tamaño del areglo de 10 en 10
-    for (nIncreTam = 10, nIncreTamAux = 1, nTam = 10; nTam <= 1000000; nTam += nIncreTam)
+    for (nIncreTam = 10, nIncreTamAux = 1, nTam = 10; nTam <= 10000000; nTam += nIncreTam)
     {
 
         // condicion para incrementar el tamaño

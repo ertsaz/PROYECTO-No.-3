@@ -1,0 +1,7 @@
+http://www.chuidiang.org/clinux/funciones/rand.php // funcion para generear numeros aleatorios
+https://www.elotrolado.net/hilo_generar-x-numeros-aleatorios-sin-repeticion-en-c_1238355 // funcion para generear numeros aleatorios
+https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C/Manejo_de_archivos // Crear Archivos
+https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=936:escribir-guardar-datos-en-ficheros-o-archivos-en-lenguaje-c-fputc-putc-fputs-fprintf-ejemplos-cu00537f&catid=82&Itemid=210
+https://w3.ual.es/~abecerra/ID/archivos.pdf // Crear Archivos txt
+https://www.youtube.com/watch?v=x2niMA5tzGo // Crear Archivos cvs
+https://www.youtube.com/watch?v=da8prmVYul8 // Crear Archivos cvs

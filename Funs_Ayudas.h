@@ -38,7 +38,7 @@ void GeneradorDeNumeros()
 		exit(1);
 	}
 
-	char numero[] = "/0";
+	char numero[] = "";
 
 	int lg = tam;
 	time_t t; // tipo definido en time.h
