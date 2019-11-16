@@ -18,7 +18,7 @@ void swap(int i, int j, int *arr)
 	arr[j] = tmp;
 }
 
-// generacion de un numero aleatorio 
+// generacion de un numero aleatorio
 int randInt(int min, int max)
 {
 	int randomNum = (int)(rand() % (max - min + 1) + min);
@@ -29,7 +29,7 @@ void GeneradorDeNumeros()
 {
 	FILE *fp;
 	char aux[80];
-
+	
 	fp = fopen("numeros.txt", "wt");
 
 	if (fp == NULL)
@@ -38,7 +38,7 @@ void GeneradorDeNumeros()
 		exit(1);
 	}
 
-	char numero[] = "/0";
+	char numero[] = "";
 
 	int lg = tam;
 	time_t t; // tipo definido en time.h
@@ -57,5 +57,6 @@ void GeneradorDeNumeros()
 			strcpy(aux, "");
 		}
 	}
+
 	fclose(fp);
 }

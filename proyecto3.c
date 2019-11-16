@@ -44,21 +44,22 @@ void printLog(char text[300])
 }
 
 // Funcion que crea un archivo excel con los datos del algoritmo de turno
-void printResult(char *cNom_Algorit, int nTam, double tTiempoEjec)
+void printResult(char *cNom_Algorit, int nTam, double tTiempoEjec, int nInter)
 {
     char NombreArch[300];
     sprintf(NombreArch, "resultados/C_%s.csv", cNom_Algorit); // crea la carpeta y guarda la informacion
     char log[300];
     char logt[300];
+
     if (nTam > 10)
     {
-        sprintf(log, "%d, %f", nTam, tTiempoEjec);
+        sprintf(log, "%d, %f, %i", nTam, tTiempoEjec, nInter);
         escribirArchivo(NombreArch, log);
     }
     else
     {
-        sprintf(logt, "%s, %s \n", "tam del arreglo", "tiempo");
-        sprintf(log, "%d, %f", nTam, tTiempoEjec);
+        sprintf(logt, "%s, %s, %s \n", "tam del arreglo", "tiempo", "intercambio");
+        sprintf(log, "%d, %f, %i", nTam, tTiempoEjec, nInter);
         strcat(logt, log);
         escribirArchivo(NombreArch, logt);
     }
@@ -92,6 +93,7 @@ void printMuestra(char *cNom_Algorit, int nTam, int *arrNumeros, const char *mod
 void CompaAlgorit(char *cNom_Algorit, int nTam, int *arrNumeros)
 {
     char log[300];
+    int nInter = 0;
 
     sprintf(log, "----------------------------------------------------------------");
     printLog(log);
@@ -104,7 +106,7 @@ void CompaAlgorit(char *cNom_Algorit, int nTam, int *arrNumeros)
 
     clock_t tIni_Tiemp, tFin_Tiemp;
     double tTiempoEjec = (double)(tFin_Tiemp - tIni_Tiemp) / CLOCKS_PER_SEC; // Tiempo de ejecucion
-    if (nTam == 10 || nTam == 100 )
+    if (nTam == 10 || nTam == 100)
     {
         printMuestra(cNom_Algorit, nTam, arrNumeros, "original");
     }
@@ -112,12 +114,12 @@ void CompaAlgorit(char *cNom_Algorit, int nTam, int *arrNumeros)
     if (strcmp(cNom_Algorit, "heapSort") == 0)
     {
         tIni_Tiemp = clock();
-        heapSort(arrNumeros, nTam);
+        heapSort(arrNumeros, nTam, &nInter);
     }
     else if (strcmp(cNom_Algorit, "quickSort") == 0)
     {
         tIni_Tiemp = clock();
-        quickSort(0, nTam, arrNumeros);
+        quickSort(0, nTam - 1, arrNumeros, &nInter);
     }
 
     tFin_Tiemp = clock();
@@ -125,7 +127,8 @@ void CompaAlgorit(char *cNom_Algorit, int nTam, int *arrNumeros)
 
     sprintf(log, "La tarea del algoritmo ha tomado %f segundos", tTiempoEjec);
     printLog(log);
-    printResult(cNom_Algorit, nTam, tTiempoEjec);
+    printResult(cNom_Algorit, nTam, tTiempoEjec, nInter);
+    nInter = 0;
     if (nTam == 10 || nTam == 100)
     {
         printMuestra(cNom_Algorit, nTam, arrNumeros, "ordenado");
@@ -137,7 +140,7 @@ void LeerNumeroArchivo(int nTam, int *arrNumeros)
 {
     int i = 0;
     char fileArchivo[] = "numeros.txt";
-    char str[1000];
+    char str[10000];
 
     FILE *file;
     file = fopen(fileArchivo, "r");
