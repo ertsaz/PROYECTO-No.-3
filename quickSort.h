@@ -20,11 +20,11 @@ int dividir(int nIni, int nFin, int nPivote, int *arrNumeros, int *nInter)
       else
       {
          swap(nPunto_Ini, nPunto_Final, arrNumeros);
-         *nInter += 1;
+         //*nInter += 1;
       }
    }
    swap(nPunto_Ini, nFin, arrNumeros);
-   //*nInter += 1;;
+   *nInter += 1;;
 
    return nPunto_Ini;
 }

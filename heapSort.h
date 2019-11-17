@@ -39,6 +39,7 @@ void heapSort(int *arrNumeros, int nTam, int *nInter)
     {
         heapify(arrNumeros, nTam, i, nInter);
     }
+    tmp = *nInter;
 
     //Uno por uno extrae un elemento del montón
     for (i = nTam - 1; i >= 0; i--)
@@ -50,4 +51,5 @@ void heapSort(int *arrNumeros, int nTam, int *nInter)
         //llama maximo heapify en el montón reducido
         heapify(arrNumeros, i, 0, nInter);
     }
+    *nInter = tmp;
 }

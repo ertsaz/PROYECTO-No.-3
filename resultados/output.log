@@ -112,7 +112,7 @@ La tarea del algoritmo ha tomado 0.000000 segundos
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 300
-La tarea del algoritmo ha tomado 0.001000 segundos
+La tarea del algoritmo ha tomado 0.000000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
@@ -152,7 +152,7 @@ La tarea del algoritmo ha tomado 0.000000 segundos
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 700
-La tarea del algoritmo ha tomado 0.000000 segundos
+La tarea del algoritmo ha tomado 0.001000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
@@ -172,7 +172,7 @@ La tarea del algoritmo ha tomado 0.000000 segundos
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 900
-La tarea del algoritmo ha tomado 0.001000 segundos
+La tarea del algoritmo ha tomado 0.000000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
@@ -192,35 +192,35 @@ La tarea del algoritmo ha tomado 0.000000 segundos
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 2000
-La tarea del algoritmo ha tomado 0.000000 segundos
+La tarea del algoritmo ha tomado 0.001000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
 nTam de Arreglo: 2000
+La tarea del algoritmo ha tomado 0.001000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 3000
+La tarea del algoritmo ha tomado 0.001000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 3000
+La tarea del algoritmo ha tomado 0.001000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 4000
+La tarea del algoritmo ha tomado 0.002000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 4000
 La tarea del algoritmo ha tomado 0.000000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: heapSort
-nTam de Arreglo: 3000
-La tarea del algoritmo ha tomado 0.001000 segundos
-----------------------------------------------------------------
-Lenguaje C
-Nombre del algoritmo: quickSort
-nTam de Arreglo: 3000
-La tarea del algoritmo ha tomado 0.001000 segundos
-----------------------------------------------------------------
-Lenguaje C
-Nombre del algoritmo: heapSort
-nTam de Arreglo: 4000
-La tarea del algoritmo ha tomado 0.001000 segundos
-----------------------------------------------------------------
-Lenguaje C
-Nombre del algoritmo: quickSort
-nTam de Arreglo: 4000
-La tarea del algoritmo ha tomado 0.001000 segundos
-----------------------------------------------------------------
-Lenguaje C
-Nombre del algoritmo: heapSort
 nTam de Arreglo: 5000
 La tarea del algoritmo ha tomado 0.002000 segundos
 ----------------------------------------------------------------
@@ -242,7 +242,7 @@ La tarea del algoritmo ha tomado 0.001000 segundos
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 7000
-La tarea del algoritmo ha tomado 0.003000 segundos
+La tarea del algoritmo ha tomado 0.002000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
@@ -262,17 +262,477 @@ La tarea del algoritmo ha tomado 0.001000 segundos
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 9000
-La tarea del algoritmo ha tomado 0.003000 segundos
+La tarea del algoritmo ha tomado 0.004000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
 nTam de Arreglo: 9000
-La tarea del algoritmo ha tomado 0.001000 segundos
+La tarea del algoritmo ha tomado 0.002000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 10000
 La tarea del algoritmo ha tomado 0.004000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 10000
+La tarea del algoritmo ha tomado 0.002000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 20000
+La tarea del algoritmo ha tomado 0.009000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 20000
+La tarea del algoritmo ha tomado 0.004000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 30000
+La tarea del algoritmo ha tomado 0.013000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 30000
+La tarea del algoritmo ha tomado 0.006000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 40000
+La tarea del algoritmo ha tomado 0.018000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 40000
+La tarea del algoritmo ha tomado 0.008000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 50000
+La tarea del algoritmo ha tomado 0.023000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 50000
+La tarea del algoritmo ha tomado 0.011000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 60000
+La tarea del algoritmo ha tomado 0.031000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 60000
+La tarea del algoritmo ha tomado 0.012000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 70000
+La tarea del algoritmo ha tomado 0.032000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 70000
+La tarea del algoritmo ha tomado 0.014000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 80000
+La tarea del algoritmo ha tomado 0.039000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 80000
+La tarea del algoritmo ha tomado 0.017000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 90000
+La tarea del algoritmo ha tomado 0.044000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 90000
+La tarea del algoritmo ha tomado 0.017000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 100000
+La tarea del algoritmo ha tomado 0.048000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 100000
+La tarea del algoritmo ha tomado 0.020000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 200000
+La tarea del algoritmo ha tomado 0.202000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 200000
+La tarea del algoritmo ha tomado 0.042000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 300000
+La tarea del algoritmo ha tomado 0.173000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 300000
+La tarea del algoritmo ha tomado 0.070000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 400000
+La tarea del algoritmo ha tomado 0.241000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 400000
+La tarea del algoritmo ha tomado 0.088000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 500000
+La tarea del algoritmo ha tomado 0.647000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 500000
+La tarea del algoritmo ha tomado 0.111000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 600000
+La tarea del algoritmo ha tomado 0.472000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 600000
+La tarea del algoritmo ha tomado 0.134000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 700000
+La tarea del algoritmo ha tomado 0.538000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 700000
+La tarea del algoritmo ha tomado 0.156000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 800000
+La tarea del algoritmo ha tomado 0.657000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 800000
+La tarea del algoritmo ha tomado 0.182000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 900000
+La tarea del algoritmo ha tomado 0.909000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 900000
+La tarea del algoritmo ha tomado 0.206000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 1000000
+La tarea del algoritmo ha tomado 0.859000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 1000000
+La tarea del algoritmo ha tomado 0.236000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 10
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 10
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 20
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 20
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 30
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 30
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 40
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 40
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 50
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 50
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 60
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 60
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 70
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 70
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 80
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 80
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 90
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 90
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 100
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 100
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 200
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 200
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 300
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 300
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 400
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 400
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 500
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 500
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 600
+La tarea del algoritmo ha tomado 0.001000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 600
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 700
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 700
+La tarea del algoritmo ha tomado 0.001000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 800
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 800
+La tarea del algoritmo ha tomado 0.001000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 900
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 900
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 1000
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 1000
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 2000
+La tarea del algoritmo ha tomado 0.001000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 2000
+La tarea del algoritmo ha tomado 0.001000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 3000
+La tarea del algoritmo ha tomado 0.001000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 3000
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 4000
+La tarea del algoritmo ha tomado 0.001000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 4000
+La tarea del algoritmo ha tomado 0.000000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 5000
+La tarea del algoritmo ha tomado 0.001000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 5000
+La tarea del algoritmo ha tomado 0.001000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 6000
+La tarea del algoritmo ha tomado 0.003000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 6000
+La tarea del algoritmo ha tomado 0.001000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 7000
+La tarea del algoritmo ha tomado 0.002000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 7000
+La tarea del algoritmo ha tomado 0.001000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 8000
+La tarea del algoritmo ha tomado 0.003000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 8000
+La tarea del algoritmo ha tomado 0.002000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 9000
+La tarea del algoritmo ha tomado 0.003000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: quickSort
+nTam de Arreglo: 9000
+La tarea del algoritmo ha tomado 0.002000 segundos
+----------------------------------------------------------------
+Lenguaje C
+Nombre del algoritmo: heapSort
+nTam de Arreglo: 10000
+La tarea del algoritmo ha tomado 0.003000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
@@ -302,7 +762,7 @@ La tarea del algoritmo ha tomado 0.006000 segundos
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 40000
-La tarea del algoritmo ha tomado 0.020000 segundos
+La tarea del algoritmo ha tomado 0.018000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
@@ -312,7 +772,7 @@ La tarea del algoritmo ha tomado 0.008000 segundos
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 50000
-La tarea del algoritmo ha tomado 0.066000 segundos
+La tarea del algoritmo ha tomado 0.022000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
@@ -322,17 +782,17 @@ La tarea del algoritmo ha tomado 0.010000 segundos
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 60000
-La tarea del algoritmo ha tomado 0.030000 segundos
+La tarea del algoritmo ha tomado 0.028000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
 nTam de Arreglo: 60000
-La tarea del algoritmo ha tomado 0.012000 segundos
+La tarea del algoritmo ha tomado 0.013000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 70000
-La tarea del algoritmo ha tomado 0.058000 segundos
+La tarea del algoritmo ha tomado 0.032000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
@@ -342,17 +802,17 @@ La tarea del algoritmo ha tomado 0.015000 segundos
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 80000
-La tarea del algoritmo ha tomado 0.043000 segundos
+La tarea del algoritmo ha tomado 0.042000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
 nTam de Arreglo: 80000
-La tarea del algoritmo ha tomado 0.017000 segundos
+La tarea del algoritmo ha tomado 0.016000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 90000
-La tarea del algoritmo ha tomado 0.049000 segundos
+La tarea del algoritmo ha tomado 0.042000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
@@ -362,99 +822,99 @@ La tarea del algoritmo ha tomado 0.019000 segundos
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 100000
-La tarea del algoritmo ha tomado 0.069000 segundos
+La tarea del algoritmo ha tomado 0.053000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
 nTam de Arreglo: 100000
-La tarea del algoritmo ha tomado 0.022000 segundos
+La tarea del algoritmo ha tomado 0.021000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 200000
-La tarea del algoritmo ha tomado 0.056000 segundos
+La tarea del algoritmo ha tomado 0.267000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
 nTam de Arreglo: 200000
-La tarea del algoritmo ha tomado 0.037000 segundos
+La tarea del algoritmo ha tomado 0.045000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 300000
-La tarea del algoritmo ha tomado 0.067000 segundos
+La tarea del algoritmo ha tomado 0.207000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
 nTam de Arreglo: 300000
-La tarea del algoritmo ha tomado 0.058000 segundos
+La tarea del algoritmo ha tomado 0.144000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 400000
-La tarea del algoritmo ha tomado 0.066000 segundos
+La tarea del algoritmo ha tomado 0.237000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
 nTam de Arreglo: 400000
-La tarea del algoritmo ha tomado 0.078000 segundos
+La tarea del algoritmo ha tomado 0.090000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 500000
-La tarea del algoritmo ha tomado 0.084000 segundos
+La tarea del algoritmo ha tomado 0.320000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
 nTam de Arreglo: 500000
-La tarea del algoritmo ha tomado 0.093000 segundos
+La tarea del algoritmo ha tomado 0.118000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 600000
-La tarea del algoritmo ha tomado 0.071000 segundos
+La tarea del algoritmo ha tomado 0.432000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
 nTam de Arreglo: 600000
-La tarea del algoritmo ha tomado 0.110000 segundos
+La tarea del algoritmo ha tomado 0.140000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 700000
-La tarea del algoritmo ha tomado 0.073000 segundos
+La tarea del algoritmo ha tomado 0.498000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
 nTam de Arreglo: 700000
-La tarea del algoritmo ha tomado 0.129000 segundos
+La tarea del algoritmo ha tomado 0.161000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 800000
-La tarea del algoritmo ha tomado 0.092000 segundos
+La tarea del algoritmo ha tomado 0.644000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
 nTam de Arreglo: 800000
-La tarea del algoritmo ha tomado 0.149000 segundos
+La tarea del algoritmo ha tomado 0.186000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 900000
-La tarea del algoritmo ha tomado 0.078000 segundos
+La tarea del algoritmo ha tomado 0.913000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
 nTam de Arreglo: 900000
-La tarea del algoritmo ha tomado 0.169000 segundos
+La tarea del algoritmo ha tomado 0.243000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: heapSort
 nTam de Arreglo: 1000000
-La tarea del algoritmo ha tomado 0.081000 segundos
+La tarea del algoritmo ha tomado 0.878000 segundos
 ----------------------------------------------------------------
 Lenguaje C
 Nombre del algoritmo: quickSort
 nTam de Arreglo: 1000000
-La tarea del algoritmo ha tomado 0.184000 segundos
+La tarea del algoritmo ha tomado 0.233000 segundos
