@@ -29,8 +29,9 @@ Prof. Crispina Ramos
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h> //
 #include <time.h>
-#include <string.h>                     //
+#include <windows.h>
 #include "Funs_Ayudas.h"                // funciones que son comunes entre archivos
 #include "Algoritmo_De_Ordenamientos.h" // Llaman a los dos algoritmos de ordenamiento
 
@@ -101,38 +102,38 @@ void CompaAlgorit(char *cNom_Algorit, int nTam, int *arrNumeros)
     printLog(log);
     sprintf(log, "Nombre del algoritmo: %s", cNom_Algorit);
     printLog(log);
-    sprintf(log, "nTam de Arreglo: %d", nTam);
+    sprintf(log, "TAmaño del Arreglo: %d", nTam);
     printLog(log);
 
-    clock_t tIni_Tiemp, tFin_Tiemp;
-    double tTiempoEjec = (double)(tFin_Tiemp - tIni_Tiemp) / CLOCKS_PER_SEC; // Tiempo de ejecucion
+    LARGE_INTEGER frequency;
+    LARGE_INTEGER t1, t2;
+    double tTiempoEjec;
+    QueryPerformanceFrequency(&frequency);
+
     if (nTam == 10 || nTam == 100)
-    {
         printMuestra(cNom_Algorit, nTam, arrNumeros, "original");
-    }
 
     if (strcmp(cNom_Algorit, "heapSort") == 0)
     {
-        tIni_Tiemp = clock();
+        QueryPerformanceCounter(&t1);
         heapSort(arrNumeros, nTam, &nInter);
     }
     else if (strcmp(cNom_Algorit, "quickSort") == 0)
     {
-        tIni_Tiemp = clock();
-        quickSort(0, nTam - 1, arrNumeros, &nInter);
+        QueryPerformanceCounter(&t1);
+        quickSort(0, nTam - 1, arrNumeros, &nInter); // arreglado daba basura
     }
 
-    tFin_Tiemp = clock();
-    tTiempoEjec = (double)(tFin_Tiemp - tIni_Tiemp) / CLOCKS_PER_SEC;
+    QueryPerformanceCounter(&t2);
+    tTiempoEjec = (float)(t2.QuadPart - t1.QuadPart) / frequency.QuadPart;
 
     sprintf(log, "La tarea del algoritmo ha tomado %f segundos", tTiempoEjec);
     printLog(log);
     printResult(cNom_Algorit, nTam, tTiempoEjec, nInter);
     nInter = 0;
+
     if (nTam == 10 || nTam == 100)
-    {
         printMuestra(cNom_Algorit, nTam, arrNumeros, "ordenado");
-    }
 }
 
 //Leer números del archivo y almacenarlo en una matriz en la memoria
@@ -193,7 +194,7 @@ int main(int argc, char const *argv[])
             // dependiendo de el algoritmo
             CompaAlgorit(cNom_Algorit, nTam, arrNumeros);
 
-            printf("Algoritmo %s Porcesos completos [%i / %i]\n", cNom_Algorit, nTam, 1000000); // muestra progreso
+            printf("Algoritmo %-10s Porcesos completos [%-7i/%i]\n", cNom_Algorit, nTam, 1000000); // muestra progreso
         }
 
         nIncreTamAux++;

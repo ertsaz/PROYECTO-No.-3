@@ -2,7 +2,7 @@
     "configurations": [
         {
             "name": "Win32",
-            "intelliSenseMode": "${default}",
+            "intelliSenseMode": "clang-x64",
             "defines": [
                 "_DEBUG",
                 "UNICODE",
@@ -12,8 +12,7 @@
                 "__cplusplus=201703L"
             ],
             "includePath": [
-
-                "${workspaceFolder}",
+                "${workspaceFolder}/include",
                 "C:/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++",
                 "C:/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++/x86_64-w64-mingw32",
                 "C:/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++/backward",
@@ -24,6 +23,7 @@
             ],
             "browse": {
                 "path": [
+                    "${workspaceFolder}/include",
                     "C:/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++",
                     "C:/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++/x86_64-w64-mingw32",
                     "C:/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++/backward",
@@ -32,7 +32,7 @@
                     "C:/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/4.9.2/include-fixed",
                     "C:/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/4.9.2/../../../../x86_64-w64-mingw32/include"
                 ],
-                "limitSymbolsToIncludedHeaders": true,
+                "limitSymbolsToIncludedHeaders": false,
                 "databaseFilename": ""
             },
             "cStandard": "c11",

@@ -24,13 +24,16 @@ int dividir(int nIni, int nFin, int nPivote, int *arrNumeros, int *nInter)
       }
    }
    swap(nPunto_Ini, nFin, arrNumeros);
-   *nInter += 1;;
+   *nInter += 1;
 
    return nPunto_Ini;
 }
 
 void quickSort(int nIni, int nFin, int *arrNumeros, int *nInter)
 {
+   clock_t tIni_Tiemp = ((clock_t)0), tFin_Tiemp = ((clock_t)0);
+   double tTiempoEjec = (double)((clock_t)0);
+   tIni_Tiemp = clock();
    if (nFin - nIni <= 0)
    {
       return;
@@ -42,4 +45,6 @@ void quickSort(int nIni, int nFin, int *arrNumeros, int *nInter)
       quickSort(nIni, nPunto_divicion - 1, arrNumeros, nInter);
       quickSort(nPunto_divicion + 1, nFin, arrNumeros, nInter);
    }
+   tFin_Tiemp = clock();
+   tTiempoEjec = (double)(tFin_Tiemp - tIni_Tiemp) / (clock_t)(1000);
 }

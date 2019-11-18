@@ -2,13 +2,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "java",
-            "name": "CodeLens (Launch) - hola",
-            "request": "launch",
-            "mainClass": "hola",
-            "projectName": "lista_9007d2bb"
-        },
-        {
             "name": "Run C/C++",
             "type": "cppdbg",
             "request": "launch",
@@ -19,7 +12,7 @@
             "environment": [],
             "externalConsole": true,
             "MIMode": "gdb",
-            "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
+            "miDebuggerPath": "C:/MinGW64/bin/gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
@@ -40,7 +33,7 @@
             "environment": [],
             "externalConsole": true,
             "MIMode": "gdb",
-            "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
+            "miDebuggerPath": "C:/MinGW64/bin/gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
@@ -52,7 +45,7 @@
         },
         {
             "type": "java",
-            "name": "Run JAVA",
+            "name": "JAVA console",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "console": "externalTerminal",
