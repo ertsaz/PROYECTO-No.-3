@@ -166,7 +166,7 @@ int main(int argc, char const *argv[])
     char cNom_Algorit[50]; // almacena los nombres de los algoritmos
     int *arrNumeros;       // arreglo dinamico
     // Ciclo que aumenta el tamaño del areglo de 10 en 10
-    for (nIncreTam = 10, nIncreTamAux = 1, nTam = 10; nTam <= 1000000; nTam += nIncreTam)
+    for (nIncreTam = 10, nIncreTamAux = 1, nTam = 10; nTam <= 10000000; nTam += nIncreTam)
     {
 
         // condicion para incrementar el tamaño
