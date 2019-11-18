@@ -5,3 +5,4 @@ https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=
 https://w3.ual.es/~abecerra/ID/archivos.pdf // Crear Archivos txt
 https://www.youtube.com/watch?v=x2niMA5tzGo // Crear Archivos cvs
 https://www.youtube.com/watch?v=da8prmVYul8 // Crear Archivos cvs
+https://stackoverflow.com/questions/1739259/how-to-use-queryperformancecounter // captura de tiempo mas precisa

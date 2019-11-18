@@ -48,19 +48,21 @@ void printLog(char text[300])
 void printResult(char *cNom_Algorit, int nTam, double tTiempoEjec, int nInter)
 {
     char NombreArch[300];
-    sprintf(NombreArch, "resultados/C_%s.csv", cNom_Algorit); // crea la carpeta y guarda la informacion
+    sprintf(NombreArch, "resultados/resultados.csv"); // crea la carpeta y guarda la informacion
     char log[300];
     char logt[300];
 
     if (nTam > 10)
     {
-        sprintf(log, "%d, %f, %i", nTam, tTiempoEjec, nInter);
+        sprintf(log, "%d, %f, %i, %s", nTam, tTiempoEjec, nInter, cNom_Algorit);
         escribirArchivo(NombreArch, log);
     }
     else
     {
-        sprintf(logt, "%s, %s, %s \n", "tam del arreglo", "tiempo", "intercambio");
-        sprintf(log, "%d, %f, %i", nTam, tTiempoEjec, nInter);
+
+        if (strcmp(cNom_Algorit, "quickSort") == 0)
+            sprintf(logt, "%s, %s, %s, %s \n", "tam del arreglo", "tiempo", "intercambio", "Nombre de algoritmo");
+        sprintf(log, "%d, %f, %i, %s", nTam, tTiempoEjec, nInter, cNom_Algorit);
         strcat(logt, log);
         escribirArchivo(NombreArch, logt);
     }
@@ -166,7 +168,7 @@ int main(int argc, char const *argv[])
     char cNom_Algorit[50]; // almacena los nombres de los algoritmos
     int *arrNumeros;       // arreglo dinamico
     // Ciclo que aumenta el tamaño del areglo de 10 en 10
-    for (nIncreTam = 10, nIncreTamAux = 1, nTam = 10; nTam <= 10000000; nTam += nIncreTam)
+    for (nIncreTam = 10, nIncreTamAux = 1, nTam = 10; nTam <= 1000000; nTam += nIncreTam)
     {
 
         // condicion para incrementar el tamaño
@@ -181,7 +183,7 @@ int main(int argc, char const *argv[])
         // automaticamente uno seguido de otro con
         for (nAlgoritmo = 0; nAlgoritmo < 2; nAlgoritmo++)
         {
-            strcpy(cNom_Algorit, (nAlgoritmo == 0) ? "heapSort" : "quickSort");
+            strcpy(cNom_Algorit, (nAlgoritmo == 0) ? "quickSort" : "heapSort");
 
             // Se crea un arreglo de tamaño dinamico para los
             // diferentes casos
