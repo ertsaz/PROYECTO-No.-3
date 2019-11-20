@@ -33,6 +33,10 @@ desarrollamos un programa que permite generar numeros aleatorios y almacenarlos 
 // genera numeros al azar
     GeneradorDeNumeros();
 ```
+En un paso siguiente procedí a implementar los algoritmos de ordenamiento:
+
+* **[Montones (Heapsort)](https://es.wikipedia.org/wiki/Heapsort):** Complejidad O(n log n )
+* **[Rápido (Quicksort)](https://es.wikipedia.org/wiki/Quicksort):** Complejidad O(n log n).
 
 ### Resultados
 
@@ -50,5 +54,8 @@ tam del arreglo| tiempo| intercambio| Nombre de algoritmo
 |40| 0.000008| 24| heapSort|
 |50| 0.000010| 31| quickSort|
 |50| 0.000010| 32| heapSort|
+
+###### DashBoard
+![DashBoard]
 
 
