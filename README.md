@@ -56,6 +56,10 @@ tam del arreglo| tiempo| intercambio| Nombre de algoritmo
 |50| 0.000010| 32| heapSort|
 
 ###### DashBoard
-![DashBoard]
+![DashBoard (screen)](https://raw.githubusercontent.com/ertsaz/PROYECTO-No.-3/master/img/Dashboard.png)
+
+
+###### Quicksort vs Heapsort
+![comparacion (Quicksort vs Heapsort)](https://raw.githubusercontent.com/ertsaz/PROYECTO-No.-3/master/img/graficos.png)
 
 
